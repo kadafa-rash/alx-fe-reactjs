@@ -1,12 +1,12 @@
-// src/components/Header.jsx
+// src/components/Footer.jsx
 import React from 'react';
 
-function Header() {
+function Footer() {
   return (
-    <header>
-      <h1>My Favorite Cities</h1>
-    </header>
+    <footer>
+      <p>© 2023 City Lovers</p>
+    </footer>
   );
 }
 
-export default Header;
+export default Footer;
