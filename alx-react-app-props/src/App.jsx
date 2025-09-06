@@ -9,6 +9,7 @@ import MainContent from './components/MainContent'
 import Footer from './components/Footer'
 import UserProfile from './components/UserProfile';
 import UserContext from './components/UserContext';
+import UserDetails from './components/UserDetails'
 
 function App() {
   const [count, setCount] = useState(0)
