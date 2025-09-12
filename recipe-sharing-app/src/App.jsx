@@ -46,6 +46,8 @@ const App = () => {
               <IngredientFilter />
               <PrepTimeFilter />
               <RecipeList />
+              <FavoritesList />
+              <RecommendationsList />
             </>
           } />
 
