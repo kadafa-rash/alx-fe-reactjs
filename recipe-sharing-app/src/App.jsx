@@ -1,35 +1,44 @@
+import React, { useEffect } from 'react';
+import useRecipeStore from './components/recipeStore';
+import SearchBar from './components/SearchBar';
+import IngredientFilter from './components/IngredientFilter';
+import PrepTimeFilter from './components/PrepTimeFilter';
+import RecipeList from './components/RecipeList';
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useRecipeStore } from './components/recipeStore';
-import RecipeDetails from './components/RecipeDetails';
 
-const Home = () => {
-  const recipes = useRecipeStore((state) => state.recipes);
+const sampleRecipes = [
+  {
+    id: 1,
+    title: "Spaghetti Bolognese",
+    ingredients: ["pasta", "beef", "tomato sauce"],
+    prepTime: 30
+  },
+  {
+    id: 2,
+    title: "Chicken Salad",
+    ingredients: ["chicken", "lettuce", "olive oil"],
+    prepTime: 15
+  }
+];
+
+const App = () => {
+  const setRecipes = useRecipeStore(state => state.setRecipes);
+  const filterRecipes = useRecipeStore(state => state.filterRecipes);
+
+  useEffect(() => {
+    setRecipes(sampleRecipes);
+    filterRecipes();
+  }, []);
 
   return (
     <div>
-      <h1>All Recipes</h1>
-      <ul>
-        {recipes.map((recipe) => (
-          <li key={recipe.id}>
-            <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <h1>Recipe Finder</h1>
+      <SearchBar />
+      <IngredientFilter />
+      <PrepTimeFilter />
+      <RecipeList />
     </div>
   );
 };
 
-const App = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/recipes/:id" element={<RecipeDetails />} />
-      </Routes>
-    </Router>
-  );
-};
-
 export default App;
-
