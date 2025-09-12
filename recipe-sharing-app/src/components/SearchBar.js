@@ -1,29 +1,14 @@
-// SearchBar.js
-import React, { useEffect } from 'react';
-import  useRecipeStore  from './recipeStore';
+import React from 'react';
+import { useRecipeStore } from './recipeStore';
 
 const SearchBar = () => {
-    const {
-    filterRecipes,
-    setSearchTerm,
-    searchTerm
-  } = useRecipeStore();
-  //const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
-  useEffect(() => {
-    filterRecipes();
-  }, [searchTerm]);
+  const setSearchTerm = useRecipeStore(state => state.setSearchTerm);
 
-  return React.createElement('input', {
-    type: 'text',
-    placeholder: 'Search by title',
-    onChange: (event) => setSearchTerm(event.target.value),
-    style: {
-      width: '100%',
-      padding: '8px',
-      marginBottom: '10px',
-      boxSizing: 'border-box'
-    }
-  });
+  return (
+    <input
+      type="text"
+      placeholder="Search recipes..."
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+  );
 };
-
-export default SearchBar;
