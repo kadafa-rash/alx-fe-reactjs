@@ -37,7 +37,7 @@ const Search = () => {
 
     
       {loading && <p>Loading...</p>}
-      {error && <p style={{ color: 'red' }}>user cannot be found.</p>}
+      {error && <p style={{ color: 'red' }}>Looks like we cant find the user</p>}
       {userData && (
         <div style={{ border: '1px solid #ccc', padding: '1rem', maxWidth: '300px' }}>
           <img src={userData.avatar_url} alt={userData.login} width="100" />
