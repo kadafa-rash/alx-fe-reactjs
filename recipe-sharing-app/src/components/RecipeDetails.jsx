@@ -6,6 +6,7 @@ import DeleteRecipeButton from './DeleteRecipeButton';
 
 const RecipeDetails = () => {
   const { id } = useParams();
+
   const recipe = useRecipeStore((state) =>
     state.recipes.find((r) => r.id === id)
   );
@@ -23,3 +24,4 @@ const RecipeDetails = () => {
 };
 
 export default RecipeDetails;
+

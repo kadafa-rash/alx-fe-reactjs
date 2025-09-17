@@ -3,12 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import useRecipeStore from './components/recipeStore';
 import SearchBar from './components/SearchBar';
-import IngredientFilter from './components/IngredientFilter';
-import PrepTimeFilter from './components/PrepTimeFilter';
 import RecipeList from './components/RecipeList';
-
 import AddRecipeForm from './components/AddRecipeForm';
-import RecipeDetail from './components/RecipeDetail';
+import RecipeDetail from './components/RecipeDetails.jsx';
+
 
 const sampleRecipes = [
   {
