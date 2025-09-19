@@ -27,9 +27,15 @@ const Search = () => {
 
     try {
       const results = await fetchUserData(formData);
+      if (
+          !results.items || 
+          results.items === 0 || 
+          (Array.isArray(results.items) && results.items.length === 0)
+        ) {
+          setError(true);
+        }
       setUsers(results.items || []);
     } catch (err) {
-      console.error(err);
       setError(true);
     } finally {
       setLoading(false);
