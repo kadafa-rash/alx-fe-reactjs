@@ -26,7 +26,7 @@ const Search = () => {
     setUsers([]);
 
     try {
-      const results = await fetchAdvancedUserSearch(formData);
+      const results = await fetchUserData(formData);
       setUsers(results.items || []);
     } catch (err) {
       console.error(err);
@@ -68,7 +68,7 @@ const Search = () => {
         />
         <button
           type="submit"
-          className="sm:col-span-3 bg-blue-300 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+          className="sm:col-span-3 bg-blue-200 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
         >
           Search
         </button>
