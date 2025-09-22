@@ -81,7 +81,7 @@ const Search = () => {
       </form>
 
       {loading && <p className="text-center text-gray-600">Loading...</p>}
-      {error && <p className="text-center text-red-500">Looks like we can't find users with that criteria.</p>}
+      {error && <p className="text-center text-red-500">Looks like we cant find the user</p>}
 
       {users.length > 0 && (
         <div className="grid gap-4">
