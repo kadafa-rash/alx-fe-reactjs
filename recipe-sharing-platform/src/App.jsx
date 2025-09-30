@@ -1,12 +1,14 @@
-import './App.css'
+import React from 'react';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div className="text-3xl font-bold text-blue-500 p-4">
-      Hello, Recipe Sharing Platform!
+    <div className="bg-gray-50 min-h-screen">
+      <HomePage />
     </div>
   );
 }
 
 export default App;
+
 
