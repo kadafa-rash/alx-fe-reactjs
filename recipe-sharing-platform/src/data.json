@@ -1,14 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Spaghetti Carbonara",
-    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "title": "Ugali",
+    "image": "https://via.placeholder.com/150",
+    "ingredients": [
+      "Two cups of Maize floor",
+      "4 cups of water"
+    ],
+    "instructions": [
+    "Bring the water to a boil in a medium-sized pot.",
+    "Gradually add the maize flour to the boiling water while stirring continuously with a  (mwiko).",
+    "Keep stirring and turning the mixture to avoid lumps.",
+    "Continue to cook and stir until the mixture thickens and starts pulling away from the sides of the pot (about 10 minutes).",
+    "Shape the ugali into a mound, cover, and let it sit for a few minutes off the heat.",
+    "Serve hot with sukuma wiki, beef stew, or your preferred side dish."
+  ]
   },
+  
   {
-    "id": 2,
-    "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "id": 1,
+    "title": "Spaghetti Bolognese",
+    "image": "/images/spaghetti.jpg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g minced beef",
+      "1 onion",
+      "2 garlic cloves",
+      "400g canned tomatoes",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Boil the spaghetti as per package instructions.",
+      "Sauté onions and garlic until soft.",
+      "Add minced beef and cook until browned.",
+      "Add canned tomatoes and simmer for 15 minutes.",
+      "Season with salt and pepper.",
+      "Serve sauce over spaghetti."
+    ]
   }
 ]
