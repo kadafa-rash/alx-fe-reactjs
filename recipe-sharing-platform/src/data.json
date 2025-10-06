@@ -2,6 +2,7 @@
   {
     "id": 1,
     "title": "Ugali",
+    "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
     "image": "https://via.placeholder.com/150",
     "ingredients": [
       "Two cups of Maize floor",
@@ -20,6 +21,7 @@
   {
     "id": 1,
     "title": "Spaghetti Bolognese",
+    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
     "image": "/images/spaghetti.jpg",
     "ingredients": [
       "200g spaghetti",
