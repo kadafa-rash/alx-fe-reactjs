@@ -17,7 +17,7 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validation
+    
     if (!formData.username || !formData.email || !formData.password) {
       setError("All fields are required!");
       return;
@@ -26,14 +26,14 @@ const RegistrationForm = () => {
     setError("");
     console.log("Submitted Data:", formData);
 
-    // Simulate API call
+    
     fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
       body: JSON.stringify(formData),
       headers: { "Content-Type": "application/json" },
     })
       .then((res) => res.json())
-      .then((data) => alert("User registered successfully!"))
+      .then(() => alert("User registered successfully!"))
       .catch((err) => console.error("Error:", err));
   };
 
@@ -45,23 +45,29 @@ const RegistrationForm = () => {
           type="text"
           name="username"
           placeholder="Username"
-          value={formData.username}
+          value={formData.username} 
           onChange={handleChange}
-        /><br /><br />
+        />
+        <br /><br />
+
         <input
           type="email"
           name="email"
           placeholder="Email"
-          value={formData.email}
+          value={formData.email}  
           onChange={handleChange}
-        /><br /><br />
+        />
+        <br /><br />
+
         <input
           type="password"
           name="password"
           placeholder="Password"
-          value={formData.password}
+          value={formData.password}  
           onChange={handleChange}
-        /><br /><br />
+        />
+        <br /><br />
+
         {error && <p style={{ color: "red" }}>{error}</p>}
         <button type="submit">Register</button>
       </form>
