@@ -1,13 +1,20 @@
+import React from "react";
 import { Navigate } from "react-router-dom";
 
-const isAuthenticated = () => {
-  return localStorage.getItem("auth") === "true";
+// ✅ Define useAuth hook
+export const useAuth = () => {
+  const user = localStorage.getItem("auth") === "true";
+  return { user };
 };
 
+// ✅ ProtectedRoute component
 const ProtectedRoute = ({ children }) => {
-  if (!isAuthenticated()) {
+  const { user } = useAuth();
+
+  if (!user) {
     return <Navigate to="/login" replace />;
   }
+
   return children;
 };
 
