@@ -7,7 +7,7 @@ const posts = [
   { id: 3, title: "Protected Routes Example" },
 ];
 
-const Blog = () => (
+const BlogPost = () => (
   <div>
     <h2>Blog Page</h2>
     <ul>
@@ -20,4 +20,4 @@ const Blog = () => (
   </div>
 );
 
-export default Blog;
+export default BlogPost;

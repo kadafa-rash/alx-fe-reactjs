@@ -4,11 +4,11 @@ import About from "./components/About";
 import Profile from "./components/Profile";
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
-import Blog from "./components/Blog";
 import Post from "./components/Post";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BlogPost from "./components/BlogPost";
 
 const App = () => {
   return (
@@ -26,7 +26,7 @@ const App = () => {
           }
         />
 
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<BlogPost />} />
         <Route path="/blog/:id" element={<Post />} />
         <Route path="/login" element={<Login />} />
       </Routes>
